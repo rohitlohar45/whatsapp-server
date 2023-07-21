@@ -20,7 +20,11 @@ const roomInitializeConnectionHandler = require("../socketControllers/room/roomI
 const createSocketServer = (server) => {
 	const io = socket(server, {
 		cors: {
-			origin: ["http://localhost:3000", "http://localhost:3001"],
+			origin: [
+				"http://localhost:3000",
+				"http://localhost:3001",
+				"https://whatsapp-client-r6au.onrender.com",
+			],
 			methods: ["GET", "POST"],
 		},
 	});
